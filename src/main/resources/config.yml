@@ -1,0 +1,117 @@
+# =====================================================
+#   MossNewbie - Yeni Oyuncu Koruma Eklentisi
+#   Sürüm: 1.0.0 | Yapımcı: wulnrydev
+# =====================================================
+
+# -------------------------------------------------------
+# GENEL AYARLAR
+# -------------------------------------------------------
+settings:
+  # Koruma süresi (dakika cinsinden). Varsayılan: 120 dakika (2 saat)
+  protection-duration-minutes: 120
+  # Mob hasarını (PvE) engelle mi? true = engellensin, false = engellenmesin
+  block-pve-damage: true
+  # ActionBar ile kalan süreyi göster?
+  show-actionbar-timer: true
+  # ActionBar güncelleme sıklığı (tick cinsinden, 20 tick = 1 saniye)
+  actionbar-update-interval-ticks: 250
+
+# -------------------------------------------------------
+# DÜNYA KORUMA (WorldGuard) AYARLARI
+# -------------------------------------------------------
+worldguard:
+  # WorldGuard hook aktif mi?
+  enabled: true
+  # Girilmesi YASAK bölgelerin listesi (WorldGuard bölge isimleri)
+  # Yeni oyuncular bu bölgelere giremez; girmeye çalışırlarsa geri itilirler.
+  blocked-regions:
+    - "netherportal"
+    - "isimsizportal"
+    - "endportal"
+  # Geri itme (push-back) kuvveti (0.0 - 2.0 arası önerilir)
+  push-back-strength: 0.8
+  # Girmeye çalışılan bölgeye ait deny mesajı
+  deny-title: "&#FF4444&l⚠ BÖLGEYE GİRİŞ ENGELLENDİ"
+  deny-subtitle: "&#ffd500Bu alana erişim izniniz bulunmuyor!"
+
+# -------------------------------------------------------
+# SES AYARLARI
+# -------------------------------------------------------
+sounds:
+  # Koruma aktif olduğunda çalınan ses (ilk giriş)
+  protection-start:
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+    volume: 1.0
+    pitch: 1.2
+  # Korumalı birine vurulmaya çalışıldığında
+  protection-hit-blocked:
+    sound: "ENTITY_ENDERMAN_TELEPORT"
+    volume: 0.8
+    pitch: 1.5
+  # Koruma başarıyla kaldırıldığında
+  protection-removed:
+    sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+    volume: 1.0
+    pitch: 0.9
+  # Onay bekleniyor sesi (ilk /koruma kapat)
+  protection-confirm-pending:
+    sound: "BLOCK_NOTE_BLOCK_BASS"
+    volume: 0.8
+    pitch: 1.0
+  # İşlem zaman aşımı sesi
+  protection-timeout:
+    sound: "BLOCK_NOTE_BLOCK_BASS"
+    volume: 0.6
+    pitch: 0.7
+  # Bölgeye giriş engeli sesi
+  worldguard-deny:
+    sound: "ENTITY_VILLAGER_NO"
+    volume: 1.0
+    pitch: 1.0
+  # Admin ver komutu sesi
+  admin-give:
+    sound: "ENTITY_PLAYER_LEVELUP"
+    volume: 0.7
+    pitch: 1.3
+  # Admin sil komutu sesi
+  admin-remove:
+    sound: "ENTITY_ITEM_BREAK"
+    volume: 0.7
+    pitch: 1.0
+
+# -------------------------------------------------------
+# MESAJLAR
+# -------------------------------------------------------
+messages:
+  # Prefix (tüm mesajların başına eklenir)
+  prefix: "&#15FF08&lBoxPvP &8▸ "
+
+  # --- İlk Giriş / Koruma Aktif ---
+  join-title: "&#15FF08&l✦ KORUMA AKTİF"
+  join-subtitle: "&7Korumanı kaldırmak için &&#00D420/koruma kapat &7yaz!"
+  join-chat: "&7Hoş geldin! &&#00D420{player} &7adlı oyuncu olarak &&#ffd500{duration} &7sürelik yeni oyuncu korumasına sahipsin."
+  actionbar-format: "&#15FF08&l✦ Koruma: &&#ffd500{remaining} &7kaldı"
+  actionbar-expired: "&cKorumanız sona erdi."
+
+  # --- Koruma Kapatma ---
+  remove-confirm: "&7Korumanı kapatmak istediğine &c&lemin misin&7? &&#ffd5005 saniye &7içinde tekrar &&#00D420/koruma kapat &7yaz."
+  remove-success-title: "&#FF4444&l✘ KORUMA KALDIRILDI"
+  remove-success-subtitle: "&7Artık PvP korumanız aktif değil. Dikkatli olun!"
+  remove-success-chat: "&7Yeni oyuncu koruman başarıyla &c&lkaldırıldı&7. Kendine dikkat et!"
+  remove-timeout: "&7İşlem &c&lzaman aşımına &7uğradı. Koruma devam ediyor."
+  remove-no-protection: "&7Zaten aktif bir &c&lkoruman &7bulunmuyor."
+
+  # --- Hasar Engelleme ---
+  attacker-blocked: "&#ffd500{target} &7adlı oyuncunun &&#15FF08yeni oyuncu koruması &7var, saldıramazsın!"
+  victim-blocked: "&7Sana saldırmaya çalışan oyuncuya karşı &&#15FF08korumalısın&7."
+
+  # --- Admin Komutları ---
+  admin-reload: "&7Yapılandırma dosyaları başarıyla &&#00D420yenilendi&7."
+  admin-give: "&&#00D420{player} &7adlı oyuncuya &&#ffd500{duration} &7sürelik koruma &&#00D420verildi&7."
+  admin-remove: "&&#00D420{player} &7adlı oyuncunun koruması &c&lkaldırıldı&7."
+  admin-player-not-found: "&c{player} &7adında bir oyuncu bulunamadı veya şu an çevrimiçi değil."
+  admin-no-permission: "&cBu komutu kullanmak için yetkin yok!"
+  admin-already-has-protection: "&&#ffd500{player} &7zaten aktif bir korumasına sahip."
+  admin-no-protection: "&&#ffd500{player} &7adlı oyuncunun koruması zaten yok."
+  usage-player: "&7Kullanım: &&#00D420/koruma kapat"
+  usage-admin: "&7Kullanım: &&#00D420/koruma admin &7<reload | ver <oyuncu> | sil <oyuncu>>"

@@ -1,0 +1,23 @@
+name: MossNewbie
+version: 1.0.0
+main: dev.wulnry.mossnewbie.MossNewbie
+api-version: '1.21'
+author: wulnrydev
+description: BoxPvP sunucuları için yeni oyuncu koruma eklentisi.
+softdepend:
+  - WorldGuard
+
+commands:
+  koruma:
+    description: Yeni oyuncu koruma komutu.
+    usage: /koruma kapat | /koruma admin <reload|ver|sil>
+    permission: mossnewbie.use
+    aliases: [protection, koruma]
+
+permissions:
+  mossnewbie.use:
+    description: Oyuncuların /koruma komutunu kullanmasına izin verir.
+    default: true
+  mossnewbie.admin:
+    description: Admin komutlarına erişim sağlar.
+    default: op
