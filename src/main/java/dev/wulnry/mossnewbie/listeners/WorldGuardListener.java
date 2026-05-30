@@ -54,7 +54,9 @@ public class WorldGuardListener implements Listener {
 
         // Hedef konum yasaklı bölgede mi?
         if (plugin.getWorldGuardHook().isInBlockedRegion(toLocation, blockedRegions)) {
-            event.setCancelled(true);
+            // event.setCancelled(true) kullanmak setVelocity ile çakışıp oyuncuyu havada dondurur.
+            // Bunun yerine oyuncuyu geldiği yere ışınlayıp öyle geriye itiyoruz.
+            player.teleport(event.getFrom());
 
             // Oyuncuyu geri it
             pushBack(player, event.getFrom(), toLocation);

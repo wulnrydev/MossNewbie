@@ -52,7 +52,7 @@ public final class MessageUtils {
      * Sadece Player'a ActionBar mesajı gönderir.
      */
     public static void sendActionBar(Player player, String rawMessage) {
-        player.sendActionBar(net.kyori.adventure.text.Component.text(
+        player.sendActionBar(net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer.legacySection().deserialize(
                 ColorUtils.translate(rawMessage)
         ));
     }
@@ -65,8 +65,8 @@ public final class MessageUtils {
         String subtitle = ColorUtils.translate(MossNewbie.getInstance().getConfigManager().getMessage(subtitlePath));
 
         Title titleObj = Title.title(
-                net.kyori.adventure.text.Component.text(title),
-                net.kyori.adventure.text.Component.text(subtitle),
+                net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer.legacySection().deserialize(title),
+                net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer.legacySection().deserialize(subtitle),
                 Title.Times.times(Duration.ofMillis(500), Duration.ofMillis(3000), Duration.ofMillis(1000))
         );
         player.showTitle(titleObj);
@@ -77,8 +77,8 @@ public final class MessageUtils {
      */
     public static void sendRawTitle(Player player, String title, String subtitle) {
         Title titleObj = Title.title(
-                net.kyori.adventure.text.Component.text(ColorUtils.translate(title)),
-                net.kyori.adventure.text.Component.text(ColorUtils.translate(subtitle)),
+                net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer.legacySection().deserialize(ColorUtils.translate(title)),
+                net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer.legacySection().deserialize(ColorUtils.translate(subtitle)),
                 Title.Times.times(Duration.ofMillis(500), Duration.ofMillis(3000), Duration.ofMillis(1000))
         );
         player.showTitle(titleObj);

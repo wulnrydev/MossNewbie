@@ -88,13 +88,13 @@ messages:
 
   # --- İlk Giriş / Koruma Aktif ---
   join-title: "&#15FF08&l✦ KORUMA AKTİF"
-  join-subtitle: "&7Korumanı kaldırmak için &&#00D420/koruma kapat &7yaz!"
-  join-chat: "&7Hoş geldin! &&#00D420{player} &7adlı oyuncu olarak &&#ffd500{duration} &7sürelik yeni oyuncu korumasına sahipsin."
-  actionbar-format: "&#15FF08&l✦ Koruma: &&#ffd500{remaining} &7kaldı"
+  join-subtitle: "&7Korumanı kaldırmak için &#00D420/koruma kapat &7yaz!"
+  join-chat: "&7Hoş geldin! &#00D420{player} &7adlı oyuncu olarak &#ffd500{duration} &7sürelik yeni oyuncu korumasına sahipsin."
+  actionbar-format: "&#15FF08&l✦ Koruma: &#ffd500{remaining} &7kaldı"
   actionbar-expired: "&cKorumanız sona erdi."
 
   # --- Koruma Kapatma ---
-  remove-confirm: "&7Korumanı kapatmak istediğine &c&lemin misin&7? &&#ffd5005 saniye &7içinde tekrar &&#00D420/koruma kapat &7yaz."
+  remove-confirm: "&7Korumanı kapatmak istediğine &c&lemin misin&7? &#ffd5005 saniye &7içinde tekrar &#00D420/koruma kapat &7yaz."
   remove-success-title: "&#FF4444&l✘ KORUMA KALDIRILDI"
   remove-success-subtitle: "&7Artık PvP korumanız aktif değil. Dikkatli olun!"
   remove-success-chat: "&7Yeni oyuncu koruman başarıyla &c&lkaldırıldı&7. Kendine dikkat et!"
@@ -102,16 +102,16 @@ messages:
   remove-no-protection: "&7Zaten aktif bir &c&lkoruman &7bulunmuyor."
 
   # --- Hasar Engelleme ---
-  attacker-blocked: "&#ffd500{target} &7adlı oyuncunun &&#15FF08yeni oyuncu koruması &7var, saldıramazsın!"
-  victim-blocked: "&7Sana saldırmaya çalışan oyuncuya karşı &&#15FF08korumalısın&7."
+  attacker-blocked: "&#ffd500{target} &7adlı oyuncunun &#15FF08yeni oyuncu koruması &7var, saldıramazsın!"
+  victim-blocked: "&7Sana saldırmaya çalışan oyuncuya karşı &#15FF08korumalısın&7."
 
   # --- Admin Komutları ---
-  admin-reload: "&7Yapılandırma dosyaları başarıyla &&#00D420yenilendi&7."
-  admin-give: "&&#00D420{player} &7adlı oyuncuya &&#ffd500{duration} &7sürelik koruma &&#00D420verildi&7."
-  admin-remove: "&&#00D420{player} &7adlı oyuncunun koruması &c&lkaldırıldı&7."
+  admin-reload: "&7Yapılandırma dosyaları başarıyla &#00D420yenilendi&7."
+  admin-give: "&#00D420{player} &7adlı oyuncuya &#ffd500{duration} &7sürelik koruma &#00D420verildi&7."
+  admin-remove: "&#00D420{player} &7adlı oyuncunun koruması &c&lkaldırıldı&7."
   admin-player-not-found: "&c{player} &7adında bir oyuncu bulunamadı veya şu an çevrimiçi değil."
   admin-no-permission: "&cBu komutu kullanmak için yetkin yok!"
-  admin-already-has-protection: "&&#ffd500{player} &7zaten aktif bir korumasına sahip."
-  admin-no-protection: "&&#ffd500{player} &7adlı oyuncunun koruması zaten yok."
-  usage-player: "&7Kullanım: &&#00D420/koruma kapat"
-  usage-admin: "&7Kullanım: &&#00D420/koruma admin &7<reload | ver <oyuncu> | sil <oyuncu>>"
+  admin-already-has-protection: "&#ffd500{player} &7zaten aktif bir korumasına sahip."
+  admin-no-protection: "&#ffd500{player} &7adlı oyuncunun koruması zaten yok."
+  usage-player: "&7Kullanım: &#00D420/koruma kapat"
+  usage-admin: "&7Kullanım: &#00D420/koruma admin &7<reload | ver <oyuncu> | sil <oyuncu>>"
