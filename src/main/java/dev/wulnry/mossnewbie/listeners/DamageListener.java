@@ -72,12 +72,7 @@ public class DamageListener implements Listener {
         if (damager instanceof Player attackerPlayer && victim instanceof Player) {
             if (protectionManager.isProtected(attackerPlayer.getUniqueId())) {
                 event.setCancelled(true);
-                String msg = ColorUtils.translate(
-                        ColorUtils.replacePlaceholders(
-                                configManager.getMessage("messages.attacker-blocked"),
-                                "target", victim.getName()
-                        )
-                );
+                String msg = ColorUtils.translate(configManager.getMessage("messages.attacker-has-protection"));
                 String prefix = ColorUtils.translate(configManager.getMessage("messages.prefix"));
                 attackerPlayer.sendMessage(prefix + msg);
                 playSound(attackerPlayer, "protection-hit-blocked");

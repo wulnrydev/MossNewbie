@@ -31,8 +31,8 @@ worldguard:
   # Geri itme (push-back) kuvveti (0.0 - 2.0 arası önerilir)
   push-back-strength: 0.8
   # Girmeye çalışılan bölgeye ait deny mesajı
-  deny-title: "&#FF4444&l⚠ BÖLGEYE GİRİŞ ENGELLENDİ"
-  deny-subtitle: "&#ffd500Bu alana erişim izniniz bulunmuyor!"
+  deny-title: "&#FF4444&lBÖLGEYE GİRİŞ ENGELLENDİ"
+  deny-subtitle: "&#ffd500Yeni oyuncu korumanızı kapatın!"
 
 # -------------------------------------------------------
 # SES AYARLARI
@@ -87,10 +87,10 @@ messages:
   prefix: "&#15FF08&lBoxPvP &8▸ "
 
   # --- İlk Giriş / Koruma Aktif ---
-  join-title: "&#15FF08&l✦ KORUMA AKTİF"
+  join-title: "&#15FF08&lKORUMA AKTİF"
   join-subtitle: "&7Korumanı kaldırmak için &#00D420/koruma kapat &7yaz!"
   join-chat: "&7Hoş geldin! &#00D420{player} &7adlı oyuncu olarak &#ffd500{duration} &7sürelik yeni oyuncu korumasına sahipsin."
-  actionbar-format: "&#15FF08&l✦ Koruma: &#ffd500{remaining} &7kaldı"
+  actionbar-format: "&#15FF08&lKoruma: &#ffd500{remaining} &7kaldı"
   actionbar-expired: "&cKorumanız sona erdi."
 
   # --- Koruma Kapatma ---
@@ -103,6 +103,7 @@ messages:
 
   # --- Hasar Engelleme ---
   attacker-blocked: "&#ffd500{target} &7adlı oyuncunun &#15FF08yeni oyuncu koruması &7var, saldıramazsın!"
+  attacker-has-protection: "&7&#15FF08Yeni oyuncu korumanız &7var, saldıramazsın!"
   victim-blocked: "&7Sana saldırmaya çalışan oyuncuya karşı &#15FF08korumalısın&7."
 
   # --- Admin Komutları ---

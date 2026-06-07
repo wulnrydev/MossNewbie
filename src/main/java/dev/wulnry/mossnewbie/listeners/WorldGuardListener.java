@@ -81,7 +81,7 @@ public class WorldGuardListener implements Listener {
     private void pushBack(Player player, Location from, Location to) {
         double strength = configManager.getPushBackStrength();
 
-        // "from" ile "to" arasındaki yön vektörünü tersine çevir
+        // "from" ile "to" arasındaki yön vektörünü tersine çevir (bölgeden dışarı it)
         Vector direction = from.toVector().subtract(to.toVector()).normalize();
         if (direction.isZero()) {
             // Hareket yönü hesaplanamıyorsa basit geri TP yap
@@ -89,8 +89,10 @@ public class WorldGuardListener implements Listener {
             return;
         }
 
-        direction.setY(0.2); // Hafif yukarı ite
-        direction.multiply(strength);
+        // Oyuncuyu havaya hafif kaldır (sürtünmeyi azaltıp uzağa atması için)
+        direction.setY(0.4); 
+        // 3-4 blok itmesi için configdeki değeri 2.5 katına çıkartıyoruz
+        direction.multiply(strength * 2.5);
         player.setVelocity(direction);
     }
 
