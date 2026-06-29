@@ -1,8 +1,8 @@
 <div align="center">
 
-# GunlukOduller
+# MossNewbie
 
-**Marimoss için özel olarak tasarlanmış, yüksek performanslı ve tamamen özelleştirilebilir Minecraft günlük ödül eklentisi.**
+**Marimoss için özel olarak tasarlanmış, yüksek performanslı ve tamamen özelleştirilebilir Minecraft yeni oyuncu koruması eklentisi.**
 
 ![Version](https://img.shields.io/badge/Minecraft-1.20+-00D420?style=for-the-badge&logo=minecraft)
 ![License](https://img.shields.io/badge/License-Custom-ffd500?style=for-the-badge)
